@@ -1,8 +1,8 @@
 import {Figure, FigureNames} from "./Figure";
 import {Colors} from "../Colors";
 import {Cell} from "../Cell";
-import blackLogo from "../../assets/black-quen.png.png";
-import whiteLogo from "../../assets/white-quen.png.png";
+import blackLogo from "../../assets/black-queen.png";
+import whiteLogo from "../../assets/white-quen.png";
 
 export class Queen extends Figure{
 

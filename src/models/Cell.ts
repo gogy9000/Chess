@@ -21,6 +21,8 @@ constructor(board:Board,x:number,y:number,color:Colors,figure:Figure|null) {
     this.available=false
     this.id=v1()
 }
+
+
 }
 
 
