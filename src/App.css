@@ -22,9 +22,24 @@
     justify-content: center;
     align-items: center;
 }
+.cell img{
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
 .black{
 background-color: black;
 }
 .white{
     background-color: cornflowerblue;
+}
+.selected{
+    background-color: darkgray;
+}
+.available{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: green;
+
 }
