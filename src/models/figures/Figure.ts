@@ -1,9 +1,16 @@
 import {Colors} from "../Colors";
 import {Cell} from "../Cell";
 import logo from '../../assets/black-king.png'
+import {v1} from "uuid";
 
 export enum FigureNames {
-
+    FIGURE='фигура',
+    KING='король',
+    KNIGHT='конь',
+    PAWN='пешка',
+    QUEEN='королева',
+    ROOK='ладья',
+    BISHOP='слон'
 }
 
 export class Figure {
@@ -17,5 +24,14 @@ export class Figure {
     constructor(color: Colors, cell: Cell) {
         this.color = color;
         this.cell = cell;
+        this.cell.figure=this
+        this.logo=null
+        this.name=FigureNames.FIGURE
+        this.id=v1()
     }
+
+    canMove(target:Cell):boolean{
+        return true
+    }
+    moveFigure(target:Cell){}
 }
