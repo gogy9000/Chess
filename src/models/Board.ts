@@ -1,8 +1,11 @@
 import {Cell} from "./Cell";
 import {Colors} from "./Colors";
+import {Queen} from "./figures/Queen";
 
 export class Board {
+
     cells:Cell[][]=[]
+
     public initCells(){
         for (let i=0; i<8; i++){
             const row:Cell[]=[]
@@ -17,4 +20,14 @@ export class Board {
             this.cells.push(row)
         }
     }
+
+    public addFigures(){
+
+        new Queen(Colors.WHITE, this.getCell(3,3))
+
+    }
+
+    public getCell(x:number, y:number){
+        return this.cells[y][x]
  }
+}
