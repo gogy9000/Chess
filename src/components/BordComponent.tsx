@@ -31,9 +31,17 @@ export const BordComponent: FC<BoardProps> = ({board, setBoard}) => {
     }
 
     function click(cell: Cell) {
-        if (cell.figure) {
-            setSelectedCell(cell)
+
+        if (selectedCell&& selectedCell!== cell && selectedCell.figure?.canMove(cell)){
+            selectedCell.moveFigure(cell)
+            setSelectedCell(null)
+            updateBoard()
+        }else {
+            if (cell.figure) {
+                setSelectedCell(cell)
+            }
         }
+
     }
 
 
